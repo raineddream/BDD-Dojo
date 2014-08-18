@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BDDDojo
+namespace Rain.BDDDojo
 {
-    static class Program
+    static class Entrance
     {
         /// <summary>
         /// The main entry point for the application.
@@ -16,7 +13,7 @@ namespace BDDDojo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new ParkingCostCalculator());
         }
     }
 }
