@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblParkingLotType = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbParkingLot = new System.Windows.Forms.ComboBox();
             this.lblEntryDateTime = new System.Windows.Forms.Label();
             this.lblLeavingDateTime = new System.Windows.Forms.Label();
             this.dtEntryDate = new System.Windows.Forms.DateTimePicker();
@@ -56,13 +56,19 @@
             this.lblParkingLotType.TabIndex = 0;
             this.lblParkingLotType.Text = "Choose a parking lot";
             // 
-            // comboBox1
+            // cbParkingLot
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(206, 22);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(220, 23);
-            this.comboBox1.TabIndex = 1;
+            this.cbParkingLot.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbParkingLot.FormattingEnabled = true;
+            this.cbParkingLot.Items.AddRange(new object[] {
+            "Please choose a parking lot",
+            "Valet Parking",
+            "Short-Term Parking",
+            "Long-Term Parking"});
+            this.cbParkingLot.Location = new System.Drawing.Point(206, 22);
+            this.cbParkingLot.Name = "cbParkingLot";
+            this.cbParkingLot.Size = new System.Drawing.Size(220, 23);
+            this.cbParkingLot.TabIndex = 1;
             // 
             // lblEntryDateTime
             // 
@@ -162,7 +168,7 @@
             // 
             this.grpParkingInfo.Controls.Add(this.lblParkingLotType);
             this.grpParkingInfo.Controls.Add(this.rbLeavingPM);
-            this.grpParkingInfo.Controls.Add(this.comboBox1);
+            this.grpParkingInfo.Controls.Add(this.cbParkingLot);
             this.grpParkingInfo.Controls.Add(this.rbLeavingAM);
             this.grpParkingInfo.Controls.Add(this.lblEntryDateTime);
             this.grpParkingInfo.Controls.Add(this.txtLeavingTime);
@@ -212,6 +218,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ParkingCostCalculator";
             this.Text = "Parking Cost Calculator";
+            this.Load += new System.EventHandler(this.ParkingCostCalculator_Load);
             this.grpParkingInfo.ResumeLayout(false);
             this.grpParkingInfo.PerformLayout();
             this.ResumeLayout(false);
@@ -222,7 +229,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblParkingLotType;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbParkingLot;
         private System.Windows.Forms.Label lblEntryDateTime;
         private System.Windows.Forms.Label lblLeavingDateTime;
         private System.Windows.Forms.DateTimePicker dtEntryDate;
