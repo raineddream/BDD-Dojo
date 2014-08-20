@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Moq;
+using NUnit.Framework;
+using Rain.BDDDojo.ParkingCost;
 using TechTalk.SpecFlow;
 
 namespace Rain.BDDDojo.IntegrationTest.Features
@@ -6,16 +8,27 @@ namespace Rain.BDDDojo.IntegrationTest.Features
     [Binding]
     public class ValetParkingSteps
     {
+        private Mock<IParkingCostCalculator> _mockedCalculator;
+        private ParkingCostCalculatorPresenter _presenter;
+        private double _actualCost;
+
+        [BeforeScenario]
+        public void SetupScenario()
+        {
+            _mockedCalculator = new Mock<IParkingCostCalculator>();
+            _presenter = new ParkingCostCalculatorPresenter(_mockedCalculator.Object);
+        }
+
         [When(@"I park my car in the Valet Parking Lot for (.*) minutes")]
         public void When_I_par_my_car_in_the_valet_parking_lot_for_minutes(int minutes)
         {
-            ScenarioContext.Current.Pending();
+            _actualCost = _presenter.CalculateCost(ParkingType.ValetParking, minutes);
         }
 
         [Then(@"I will have to pay \$(.*)")]
-        public void ThenIWillHaveToPay(Decimal p0)
+        public void Then_I_will_have_to_pay(double expectedCost)
         {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual(expectedCost, _actualCost, 0.0001);
         }
     }
 }
