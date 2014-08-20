@@ -14,7 +14,7 @@ namespace Rain.BDDDojo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ParkingCostCalculator());
+            Application.Run(new ParkingCostCalculatorForm());
         }
     }
 }

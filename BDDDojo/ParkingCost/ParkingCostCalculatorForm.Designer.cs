@@ -1,6 +1,6 @@
 ﻿namespace Rain.BDDDojo.ParkingCost
 {
-    partial class ParkingCostCalculator
+    partial class ParkingCostCalculatorForm
     {
         /// <summary>
         /// Required designer variable.

@@ -9,7 +9,7 @@
             _calculator = calculator;
         }
 
-        public double CalculateCost(ParkingType valetParking, int minutes)
+        public double CalculateCost(ParkingType parkingType, int minutes)
         {
             throw new System.NotImplementedException();
         }
