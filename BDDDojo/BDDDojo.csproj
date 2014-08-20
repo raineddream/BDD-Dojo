@@ -44,17 +44,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IParkingCostCalculator.cs" />
-    <Compile Include="ParkingCostCalculator.cs">
+    <Compile Include="ParkingCost\IParkingCostCalculator.cs" />
+    <Compile Include="ParkingCost\ParkingCostCalculator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ParkingCostCalculator.Designer.cs">
+    <Compile Include="ParkingCost\ParkingCostCalculator.Designer.cs">
       <DependentUpon>ParkingCostCalculator.cs</DependentUpon>
     </Compile>
     <Compile Include="Entrance.cs" />
-    <Compile Include="ParkingCostCalculatorPresenter.cs" />
+    <Compile Include="ParkingCost\ParkingCostCalculatorPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ParkingCostCalculator.resx">
+    <EmbeddedResource Include="ParkingCost\ParkingCostCalculator.resx">
       <DependentUpon>ParkingCostCalculator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

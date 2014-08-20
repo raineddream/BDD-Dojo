@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Rain.BDDDojo
+namespace Rain.BDDDojo.ParkingCost
 {
     public partial class ParkingCostCalculator : Form, IParkingCostCalculator
     {

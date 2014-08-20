@@ -1,4 +1,4 @@
-namespace Rain.BDDDojo
+namespace Rain.BDDDojo.ParkingCost
 {
     public interface IParkingCostCalculator
     {
