@@ -11,7 +11,15 @@
 
         public double CalculateCost(ParkingType parkingType, int minutes)
         {
-            throw new System.NotImplementedException();
+            if (parkingType == ParkingType.ValetParking)
+            {
+                if (minutes <= 300)
+                {
+                    return 12;
+                }
+            }
+
+            return 0;
         }
     }
 }
