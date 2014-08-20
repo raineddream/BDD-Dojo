@@ -66,14 +66,16 @@ namespace Rain.BDDDojo.IntegrationTest.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Calculate Valet Parking Cost for half an hour")]
+        [NUnit.Framework.IgnoreAttribute()]
         public virtual void CalculateValetParkingCostForHalfAnHour()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Calculate Valet Parking Cost for half an hour", ((string[])(null)));
-#line 4
-this.ScenarioSetup(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Calculate Valet Parking Cost for half an hour", new string[] {
+                        "Ignore"});
 #line 5
- testRunner.When("I park my car in the Valet Parking Lot for 30 minutes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 6
+ testRunner.When("I park my car in the Valet Parking Lot for 30 minutes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 7
  testRunner.Then("I will have to pay $12.00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
