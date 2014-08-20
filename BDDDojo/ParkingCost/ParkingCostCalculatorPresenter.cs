@@ -2,11 +2,11 @@
 {
     public class ParkingCostCalculatorPresenter
     {
-        private readonly IParkingCostCalculator _calculator;
+        private readonly IParkingCostCalculatorView _view;
 
-        public ParkingCostCalculatorPresenter(IParkingCostCalculator calculator)
+        public ParkingCostCalculatorPresenter(IParkingCostCalculatorView view)
         {
-            _calculator = calculator;
+            _view = view;
         }
 
         public double CalculateCost(ParkingType parkingType, int minutes)

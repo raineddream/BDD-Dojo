@@ -8,14 +8,14 @@ namespace Rain.BDDDojo.IntegrationTest.Features
     [Binding]
     public class ValetParkingSteps
     {
-        private Mock<IParkingCostCalculator> _mockedCalculator;
+        private Mock<IParkingCostCalculatorView> _mockedCalculator;
         private ParkingCostCalculatorPresenter _presenter;
         private double _actualCost;
 
         [BeforeScenario]
         public void SetupScenario()
         {
-            _mockedCalculator = new Mock<IParkingCostCalculator>();
+            _mockedCalculator = new Mock<IParkingCostCalculatorView>();
             _presenter = new ParkingCostCalculatorPresenter(_mockedCalculator.Object);
         }
 

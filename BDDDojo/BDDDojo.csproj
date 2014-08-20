@@ -44,19 +44,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ParkingCost\IParkingCostCalculator.cs" />
-    <Compile Include="ParkingCost\ParkingCostCalculatorForm.cs">
+    <Compile Include="ParkingCost\IParkingCostCalculatorView.cs" />
+    <Compile Include="ParkingCost\ParkingCostCalculatorViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ParkingCost\ParkingCostCalculatorForm.Designer.cs">
-      <DependentUpon>ParkingCostCalculatorForm.cs</DependentUpon>
+    <Compile Include="ParkingCost\ParkingCostCalculatorViewForm.Designer.cs">
+      <DependentUpon>ParkingCostCalculatorViewForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Entrance.cs" />
     <Compile Include="ParkingCost\ParkingCostCalculatorPresenter.cs" />
     <Compile Include="ParkingCost\ParkingType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ParkingCost\ParkingCostCalculatorForm.resx">
-      <DependentUpon>ParkingCostCalculatorForm.cs</DependentUpon>
+    <EmbeddedResource Include="ParkingCost\ParkingCostCalculatorViewForm.resx">
+      <DependentUpon>ParkingCostCalculatorViewForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
