@@ -28,7 +28,7 @@ namespace Rain.BDDDojo.IntegrationTest.Features
         [Then(@"I will have to pay \$(.*)")]
         public void Then_I_will_have_to_pay(double expectedCost)
         {
-            Assert.AreEqual(expectedCost, _actualCost, 0.0001);
+            Assert.That(_actualCost, Is.EqualTo(expectedCost));
         }
     }
 }
