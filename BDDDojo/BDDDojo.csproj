@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IParkingCostCalculator.cs" />
     <Compile Include="ParkingCostCalculator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -51,6 +52,7 @@
       <DependentUpon>ParkingCostCalculator.cs</DependentUpon>
     </Compile>
     <Compile Include="Entrance.cs" />
+    <Compile Include="ParkingCostCalculatorPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ParkingCostCalculator.resx">
       <DependentUpon>ParkingCostCalculator.cs</DependentUpon>
