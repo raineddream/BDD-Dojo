@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ParkingCost\Calculators\CalculatorFactory.cs" />
+    <Compile Include="ParkingCost\Calculators\IParkingCostCalculator.cs" />
+    <Compile Include="ParkingCost\Calculators\ValetParkingCalculator.cs" />
     <Compile Include="ParkingCost\IParkingCostCalculatorView.cs" />
     <Compile Include="ParkingCost\ParkingCostCalculatorViewForm.cs">
       <SubType>Form</SubType>

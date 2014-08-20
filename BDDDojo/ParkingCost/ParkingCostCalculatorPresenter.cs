@@ -1,4 +1,6 @@
-﻿namespace Rain.BDDDojo.ParkingCost
+﻿using Rain.BDDDojo.ParkingCost.Calculators;
+
+namespace Rain.BDDDojo.ParkingCost
 {
     public class ParkingCostCalculatorPresenter
     {
@@ -11,15 +13,8 @@
 
         public double CalculateCost(ParkingType parkingType, int minutes)
         {
-            if (parkingType == ParkingType.ValetParking)
-            {
-                if (minutes <= 300)
-                {
-                    return 12;
-                }
-            }
-
-            return 0;
+            IParkingCostCalculator calculator = CalculatorFactory.CreateCalculator(parkingType);
+            return calculator.CalculateCost(minutes);
         }
     }
 }
