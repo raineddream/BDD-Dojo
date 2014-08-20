@@ -7,8 +7,8 @@
     <ProjectGuid>{1CFB79EC-3B0D-43C9-AD2C-023067FC86F0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BDDDojo.UnitTest</RootNamespace>
-    <AssemblyName>BDDDojo.UnitTest</AssemblyName>
+    <RootNamespace>Rain.BDDDojo.UnitTest</RootNamespace>
+    <AssemblyName>Rain.BDDDojo.UnitTest</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Calculators\ValetParkingCalculatorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

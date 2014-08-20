@@ -2,7 +2,7 @@
 using Rain.BDDDojo.ParkingCost;
 using Rain.BDDDojo.ParkingCost.Calculators;
 
-namespace BDDDojo.UnitTest.Calculators
+namespace Rain.BDDDojo.UnitTest.Calculators
 {
     [TestFixture]
     public class ValetParkingCalculatorTest
