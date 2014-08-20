@@ -14,7 +14,7 @@ namespace Rain.BDDDojo.ParkingCost
 
         public void GiveParkingCost(double cost)
         {
-            MessageBox.Show(string.Format("You should pay: {0}", cost), @"Parking Cost");
+            MessageBox.Show(string.Format("You should pay: ${0:0.00}", cost), @"Parking Cost");
         }
 
         private void ParkingCostCalculator_Load(object sender, System.EventArgs e)
