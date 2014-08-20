@@ -195,6 +195,7 @@
             this.btnCalculateCharge.TabIndex = 13;
             this.btnCalculateCharge.Text = "Calculate";
             this.btnCalculateCharge.UseVisualStyleBackColor = true;
+            this.btnCalculateCharge.Click += new System.EventHandler(this.btnCalculateCharge_Click);
             // 
             // chkBestCharge
             // 
@@ -207,7 +208,7 @@
             this.chkBestCharge.Text = "Best Charge";
             this.chkBestCharge.UseVisualStyleBackColor = true;
             // 
-            // ParkingCostCalculator
+            // ParkingCostCalculatorViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -216,7 +217,7 @@
             this.Controls.Add(this.btnCalculateCharge);
             this.Controls.Add(this.grpParkingInfo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "ParkingCostCalculator";
+            this.Name = "ParkingCostCalculatorViewForm";
             this.Text = "Parking Cost Calculator";
             this.Load += new System.EventHandler(this.ParkingCostCalculator_Load);
             this.grpParkingInfo.ResumeLayout(false);

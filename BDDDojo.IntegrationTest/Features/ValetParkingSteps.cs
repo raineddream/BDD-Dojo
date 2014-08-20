@@ -22,13 +22,13 @@ namespace Rain.BDDDojo.IntegrationTest.Features
         [When(@"I park my car in the Valet Parking Lot for (.*) minutes")]
         public void When_I_par_my_car_in_the_valet_parking_lot_for_minutes(int minutes)
         {
-            _actualCost = _presenter.CalculateCost(ParkingType.ValetParking, minutes);
+            _presenter.CalculateCost(ParkingType.ValetParking, minutes);
         }
 
         [Then(@"I will have to pay \$(.*)")]
         public void Then_I_will_have_to_pay(double expectedCost)
         {
-            Assert.That(_actualCost, Is.EqualTo(expectedCost));
+            _mockedCalculator.Verify(x => x.GiveParkingCost(expectedCost));
         }
     }
 }

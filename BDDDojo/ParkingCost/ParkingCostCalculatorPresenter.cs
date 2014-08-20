@@ -11,10 +11,10 @@ namespace Rain.BDDDojo.ParkingCost
             _view = view;
         }
 
-        public double CalculateCost(ParkingType parkingType, int minutes)
+        public void CalculateCost(ParkingType parkingType, int minutes)
         {
             IParkingCostCalculator calculator = CalculatorFactory.CreateCalculator(parkingType);
-            return calculator.CalculateCost(minutes);
+            _view.GiveParkingCost(calculator.CalculateCost(minutes));
         }
     }
 }

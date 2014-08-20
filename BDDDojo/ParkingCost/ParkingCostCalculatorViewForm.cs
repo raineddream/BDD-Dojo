@@ -12,6 +12,11 @@ namespace Rain.BDDDojo.ParkingCost
             _presenter = new ParkingCostCalculatorPresenter(this);
         }
 
+        public void GiveParkingCost(double cost)
+        {
+            MessageBox.Show(string.Format("You should pay: {0}", cost), @"Parking Cost");
+        }
+
         private void ParkingCostCalculator_Load(object sender, System.EventArgs e)
         {
             cbParkingLot.SelectedIndex = GetIndexOfParkingLotChoosingTip();
@@ -20,6 +25,11 @@ namespace Rain.BDDDojo.ParkingCost
         private int GetIndexOfParkingLotChoosingTip()
         {
             return cbParkingLot.FindString("Please choose");
+        }
+
+        private void btnCalculateCharge_Click(object sender, System.EventArgs e)
+        {
+            _presenter.CalculateCost(ParkingType.ValetParking, 30);
         }
     }
 }
