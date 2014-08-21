@@ -2,11 +2,11 @@
 
 namespace Rain.BDDDojo.ParkingCost
 {
-    public partial class ParkingCostCalculatorViewForm : Form, IParkingCostCalculatorView
+    public partial class ParkingCostCalculatorForm : Form, IParkingCostCalculatorView
     {
         private readonly ParkingCostCalculatorPresenter _presenter;
 
-        public ParkingCostCalculatorViewForm()
+        public ParkingCostCalculatorForm()
         {
             InitializeComponent();
             _presenter = new ParkingCostCalculatorPresenter(this);
