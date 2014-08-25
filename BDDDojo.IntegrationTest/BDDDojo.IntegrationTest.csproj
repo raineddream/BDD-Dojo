@@ -49,6 +49,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\MinuteParser.cs" />
     <Compile Include="Features\ValetParking.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -56,6 +57,7 @@
     </Compile>
     <Compile Include="Features\ValetParkingSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelfTest\MinuteParserTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
