@@ -13,5 +13,13 @@ namespace Rain.BDDDojo.IntegrationTest.SelfTest
 
             Assert.That(minutes, Is.EqualTo(10));
         }
+
+        [Test]
+        public void Should_parse_minutes_even_no_space_between_number_and_unit()
+        {
+            int minutes = MinuteParser.Parse("10minutes");
+
+            Assert.That(minutes, Is.EqualTo(10));
+        }
     }
 }
