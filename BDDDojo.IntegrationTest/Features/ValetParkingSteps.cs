@@ -1,5 +1,4 @@
 ﻿using Moq;
-using NUnit.Framework;
 using Rain.BDDDojo.ParkingCost;
 using TechTalk.SpecFlow;
 
