@@ -18,7 +18,7 @@ namespace Rain.BDDDojo.IntegrationTest.Features
             _presenter = new ParkingCostCalculatorPresenter(_mockedCalculator.Object);
         }
 
-        [When(@"I park my car in the Valet Parking Lot for (.*) minutes")]
+        [When(@"I park my car in the Valet Parking Lot for (.*)")]
         public void When_I_par_my_car_in_the_valet_parking_lot_for_minutes(string duration)
         {
             _presenter.CalculateCost(ParkingType.ValetParking, MinuteParser.Parse(duration));
