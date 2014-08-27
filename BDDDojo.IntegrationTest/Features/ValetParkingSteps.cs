@@ -19,9 +19,9 @@ namespace Rain.BDDDojo.IntegrationTest.Features
         }
 
         [When(@"I park my car in the Valet Parking Lot for (.*) minutes")]
-        public void When_I_par_my_car_in_the_valet_parking_lot_for_minutes(int minutes)
+        public void When_I_par_my_car_in_the_valet_parking_lot_for_minutes(string duration)
         {
-            _presenter.CalculateCost(ParkingType.ValetParking, minutes);
+            _presenter.CalculateCost(ParkingType.ValetParking, MinuteParser.Parse(duration));
         }
 
         [Then(@"I will have to pay \$(.*)")]
