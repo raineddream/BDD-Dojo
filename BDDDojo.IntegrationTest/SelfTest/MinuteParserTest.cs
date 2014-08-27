@@ -9,25 +9,43 @@ namespace Rain.BDDDojo.IntegrationTest.SelfTest
         [Test]
         public void Should_only_parse_minutes()
         {
-            int minutes = MinuteParser.Parse("10 minutes");
-
-            Assert.That(minutes, Is.EqualTo(10));
+            Assert.That(MinuteParser.Parse("10 minutes"), Is.EqualTo(10));
         }
 
         [Test]
         public void Should_parse_minutes_even_no_space_between_number_and_unit()
         {
-            int minutes = MinuteParser.Parse("10minutes");
-
-            Assert.That(minutes, Is.EqualTo(10));
+            Assert.That(MinuteParser.Parse("10minutes"), Is.EqualTo(10));
         }
 
         [Test]
         public void Should_parse_ONE_minute()
         {
-            int minutes = MinuteParser.Parse("1 minute");
+            Assert.That(MinuteParser.Parse("1 minute"), Is.EqualTo(1));
+        }
 
-            Assert.That(minutes, Is.EqualTo(1));
+        [Test]
+        public void Should_only_parse_hours()
+        {
+            Assert.That(MinuteParser.Parse("2 hours"), Is.EqualTo(120));
+        }
+
+        [Test]
+        public void Should_parse_hours_even_no_space_between_number_and_unit()
+        {
+            Assert.That(MinuteParser.Parse("2hours"), Is.EqualTo(120));
+        }
+
+        [Test]
+        public void Should_parse_ONE_hour()
+        {
+            Assert.That(MinuteParser.Parse("1 hour"), Is.EqualTo(60));
+        }
+
+        [Test]
+        public void Should_parse_hours_and_minutes()
+        {
+            Assert.That(MinuteParser.Parse("2 hours and 2 minutes"), Is.EqualTo(122));
         }
     }
 }
