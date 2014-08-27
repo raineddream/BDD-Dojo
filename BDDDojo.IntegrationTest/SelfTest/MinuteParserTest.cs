@@ -21,5 +21,13 @@ namespace Rain.BDDDojo.IntegrationTest.SelfTest
 
             Assert.That(minutes, Is.EqualTo(10));
         }
+
+        [Test]
+        public void Should_parse_ONE_minute()
+        {
+            int minutes = MinuteParser.Parse("1 minute");
+
+            Assert.That(minutes, Is.EqualTo(1));
+        }
     }
 }

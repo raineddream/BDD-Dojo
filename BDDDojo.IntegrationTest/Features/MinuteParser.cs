@@ -6,7 +6,7 @@ namespace Rain.BDDDojo.IntegrationTest.Features
     {
         public static int Parse(string duration)
         {
-            Match match = Regex.Match(duration, @"(\d+)\s?minutes");
+            Match match = Regex.Match(duration, @"(\d+)\s?minute(s)?");
             if (match.Success)
             {
                 string minText = match.Groups[1].Value;
