@@ -20,5 +20,17 @@ namespace Rain.BDDDojo.UnitTest.Calculators
         {
             Assert.That(_costCalculator.CalculateCost(MinuteConvertor.Hours(5)), Is.EqualTo(12));
         }
+
+        [Test]
+        public void Should_charge_18_dollars_when_valet_parking_time_is_slightly_more_than_5_hours()
+        {
+            Assert.That(_costCalculator.CalculateCost(MinuteConvertor.HoursAndMinutes(5, 1)), Is.EqualTo(18));
+        }
+
+        [Test]
+        public void Should_charge_18_dollars_when_valet_parking_time_is_1_day()
+        {
+            Assert.That(_costCalculator.CalculateCost(MinuteConvertor.Days(1)), Is.EqualTo(18));
+        }
     }
 }

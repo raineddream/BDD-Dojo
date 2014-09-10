@@ -8,7 +8,7 @@
             {
                 return 12;
             }
-            return 0;
+            return 18;
         }
     }
 }

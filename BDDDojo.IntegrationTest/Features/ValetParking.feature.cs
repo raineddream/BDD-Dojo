@@ -69,6 +69,9 @@ namespace Rain.BDDDojo.IntegrationTest.Features
         [NUnit.Framework.TestCaseAttribute("30 minutes", "12.00", null)]
         [NUnit.Framework.TestCaseAttribute("3 hours", "12.00", null)]
         [NUnit.Framework.TestCaseAttribute("5 hours", "12.00", null)]
+        [NUnit.Framework.TestCaseAttribute("5 hours 1 minute", "18.00", null)]
+        [NUnit.Framework.TestCaseAttribute("12 hours", "18.00", null)]
+        [NUnit.Framework.TestCaseAttribute("24 hours", "18.00", null)]
         public virtual void CalculateValetParkingCost(string parkingDuration, string parkingCosts, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Calculate Valet Parking Cost", exampleTags);
