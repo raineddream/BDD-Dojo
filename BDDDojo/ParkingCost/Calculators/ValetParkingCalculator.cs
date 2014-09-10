@@ -4,7 +4,7 @@
     {
         public double CalculateCost(int minutes)
         {
-            if (minutes <= 300)
+            if (minutes <= MinuteConvertor.Hours(5))
             {
                 return 12;
             }

@@ -18,7 +18,7 @@ namespace Rain.BDDDojo.UnitTest.Calculators
         [Test]
         public void Should_charge_12_dollars_when_valet_parking_time_is_less_than_5_hours()
         {
-            Assert.That(_costCalculator.CalculateCost(30), Is.EqualTo(12));
+            Assert.That(_costCalculator.CalculateCost(MinuteConvertor.Hours(5)), Is.EqualTo(12));
         }
     }
 }
