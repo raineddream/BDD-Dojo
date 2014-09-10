@@ -9,7 +9,6 @@ namespace Rain.BDDDojo.IntegrationTest.Features
     {
         private Mock<IParkingCostCalculatorView> _mockedCalculator;
         private ParkingCostCalculatorPresenter _presenter;
-        private double _actualCost;
 
         [BeforeScenario]
         public void SetupScenario()
