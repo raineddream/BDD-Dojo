@@ -4,13 +4,13 @@ namespace Rain.BDDDojo.IntegrationTest.Features
 {
     public class MinuteParser
     {
-        private const int MINUTES_PER_HOUR = 60;
+        private const int MinutesPerHour = 60;
 
         public static int Parse(string duration)
         {
             int totalMinutes = 0;
 
-            totalMinutes += ParseHours(duration) * MINUTES_PER_HOUR;
+            totalMinutes += ParseHours(duration) * MinutesPerHour;
             totalMinutes += ParseMinutes(duration);
 
             return totalMinutes;
