@@ -4,7 +4,7 @@
     {
         private const int ParkingCostIn5Hours = 12;
         private const int ParkingCostPerDay   = 18;
-        private const int MinutesPerDay       = 3600;
+        private const int MinutesPerDay       = 24 * 60;
 
         public double CalculateCost(int minutes)
         {

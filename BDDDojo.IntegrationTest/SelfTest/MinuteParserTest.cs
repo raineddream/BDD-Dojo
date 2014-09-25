@@ -51,25 +51,30 @@ namespace Rain.BDDDojo.IntegrationTest.SelfTest
         [Test]
         public void Should_only_parse_days()
         {
-            Assert.That(MinuteParser.Parse("2 days"), Is.EqualTo(7200));
+            Assert.That(MinuteParser.Parse("2 days"), Is.EqualTo(MinutesInDays(2)));
         }
 
         [Test]
         public void Should_parse_days_even_no_space_between_number_and_unit()
         {
-            Assert.That(MinuteParser.Parse("2days"), Is.EqualTo(7200));
+            Assert.That(MinuteParser.Parse("2days"), Is.EqualTo(MinutesInDays(2)));
         }
 
         [Test]
         public void Should_parse_ONE_day()
         {
-            Assert.That(MinuteParser.Parse("1 day"), Is.EqualTo(3600));
+            Assert.That(MinuteParser.Parse("1 day"), Is.EqualTo(MinutesInDays(1)));
         }
 
         [Test]
         public void Should_parse_days_and_hours_and_minutes()
         {
-            Assert.That(MinuteParser.Parse("2 days and 1 hour and 1 minutes"), Is.EqualTo(7261));
+            Assert.That(MinuteParser.Parse("2 days and 1 hour and 1 minutes"), Is.EqualTo(MinutesInDays(2) + 60 + 1));
+        }
+
+        private int MinutesInDays(int days)
+        {
+            return 60 * 24 * days;
         }
     }
 }

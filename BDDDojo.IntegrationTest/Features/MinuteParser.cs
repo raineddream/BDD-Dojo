@@ -5,7 +5,7 @@ namespace Rain.BDDDojo.IntegrationTest.Features
     public class MinuteParser
     {
         private const int MinutesPerHour = 60;
-        private const int MinutesPerDay  = 3600;
+        private const int MinutesPerDay  = 24 * MinutesPerHour;
 
         public static int Parse(string duration)
         {
