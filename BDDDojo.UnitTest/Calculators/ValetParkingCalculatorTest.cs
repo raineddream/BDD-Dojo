@@ -32,5 +32,11 @@ namespace Rain.BDDDojo.UnitTest.Calculators
         {
             Assert.That(_costCalculator.CalculateCost(MinuteConvertor.Days(1)), Is.EqualTo(18));
         }
+
+        [Test]
+        public void Should_charge_2_days_when_valet_parking_time_is_slightly_more_than_1_day()
+        {
+            Assert.That(_costCalculator.CalculateCost(MinuteConvertor.DaysAndHoursAndMinutes(1, 0, 1)), Is.EqualTo(36));
+        }
     }
 }
