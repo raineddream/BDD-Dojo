@@ -72,6 +72,12 @@ namespace Rain.BDDDojo.IntegrationTest.SelfTest
             Assert.That(MinuteParser.Parse("2 days and 1 hour and 1 minutes"), Is.EqualTo(MinutesInDays(2) + 60 + 1));
         }
 
+        [Test]
+        public void Should_parse_ONE_week()
+        {
+            Assert.That(MinuteParser.Parse("1 week"), Is.EqualTo(MinutesInDays(7)));
+        }
+
         private int MinutesInDays(int days)
         {
             return 60 * 24 * days;
