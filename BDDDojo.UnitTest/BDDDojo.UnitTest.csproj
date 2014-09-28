@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculators\MinuteConvertorTest.cs" />
+    <Compile Include="Calculators\ShortTermParkingCalculatorTest.cs" />
     <Compile Include="Calculators\ValetParkingCalculatorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -2,6 +2,7 @@
 {
     public enum ParkingType
     {
-        ValetParking
+        ValetParking,
+        ShortTermParking
     }
 }

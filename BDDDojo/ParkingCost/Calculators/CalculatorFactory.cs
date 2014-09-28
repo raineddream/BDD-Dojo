@@ -10,6 +10,8 @@ namespace Rain.BDDDojo.ParkingCost.Calculators
             {
                 case ParkingType.ValetParking:
                     return new ValetParkingCalculator();
+                case ParkingType.ShortTermParking:
+                    return new ShortTermParkingCalculator();
             }
 
             throw new InvalidEnumArgumentException("type", (int)type, type.GetType());

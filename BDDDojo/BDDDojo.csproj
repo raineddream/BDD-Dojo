@@ -47,6 +47,7 @@
     <Compile Include="ParkingCost\Calculators\CalculatorFactory.cs" />
     <Compile Include="ParkingCost\Calculators\IParkingCostCalculator.cs" />
     <Compile Include="ParkingCost\Calculators\MinuteConvertor.cs" />
+    <Compile Include="ParkingCost\Calculators\ShortTermParkingCalculator.cs" />
     <Compile Include="ParkingCost\Calculators\ValetParkingCalculator.cs" />
     <Compile Include="ParkingCost\IParkingCostCalculatorView.cs" />
     <Compile Include="ParkingCost\ParkingCostCalculatorForm.cs">
